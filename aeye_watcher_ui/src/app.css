@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* All styling is handled via CSS variables in +page.svelte scoped styles
+   and global data-theme attributes on the html element.
+   This file just brings in Tailwind's utilities for any utility classes used. */
+
+:root {
+  color-scheme: dark;
+}
