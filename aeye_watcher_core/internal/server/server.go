@@ -127,10 +127,15 @@ func (s *Server) ScanWebSocket(w http.ResponseWriter, r *http.Request) {
 	sendEvent(models.ScanEvent{Type: models.EventCheckpoint, Phase: "models", Message: "Parsing Ollama model manifests...", Percent: 62})
 	ms := scanner.NewModelScanner(home, nil)
 	ollamaModels := ms.ScanOllamaManifests()
-	sendEvent(models.ScanEvent{Type: models.EventFound, Phase: "models", Message: fmt.Sprintf("Ollama: %d model(s)", len(ollamaModels)), Percent: 65})
+	sendEvent(models.ScanEvent{Type: models.EventFound, Phase: "models", Message: fmt.Sprintf("Ollama: %d model(s)", len(ollamaModels)), Percent: 64})
+
+	// LM Studio hub scan (Windows: ~/.lmstudio/hub/models/{company}/{model})
+	sendEvent(models.ScanEvent{Type: models.EventCheckpoint, Phase: "models", Message: "Scanning LM Studio hub...", Percent: 65})
+	lmStudioModels := ms.ScanLMStudioModels()
+	sendEvent(models.ScanEvent{Type: models.EventFound, Phase: "models", Message: fmt.Sprintf("LM Studio: %d model(s)", len(lmStudioModels)), Percent: 67})
 
 	// HuggingFace cache
-	sendEvent(models.ScanEvent{Type: models.EventCheckpoint, Phase: "models", Message: "Parsing HuggingFace cache...", Percent: 67})
+	sendEvent(models.ScanEvent{Type: models.EventCheckpoint, Phase: "models", Message: "Parsing HuggingFace cache...", Percent: 68})
 	hfModels := ms.ScanHuggingFaceCache()
 	sendEvent(models.ScanEvent{Type: models.EventFound, Phase: "models", Message: fmt.Sprintf("HuggingFace: %d model(s)", len(hfModels)), Percent: 70})
 
@@ -154,7 +159,7 @@ func (s *Server) ScanWebSocket(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	allModels := scanner.DeduplicateModels(append(append(ollamaModels, hfModels...), deepModels...))
+	allModels := scanner.DeduplicateModels(append(append(append(ollamaModels, lmStudioModels...), hfModels...), deepModels...))
 	orphaned := 0
 	for _, m := range allModels {
 		if m.IsOrphaned {

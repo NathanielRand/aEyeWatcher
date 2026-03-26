@@ -23,77 +23,83 @@ func ScanDisks() []models.DiskInfo {
 
 func scanUnix() []models.DiskInfo {
 	var disks []models.DiskInfo
-	out, err := exec.Command("df", "-BGB", "--output=source,fstype,size,used,avail,pcent,target").Output()
+	// Use plain bytes (-k gives KB, easier to parse without locale issues)
+	out, err := exec.Command("df", "-k").Output()
 	if err != nil {
-		// fallback: basic df
-		out, err = exec.Command("df", "-h").Output()
-		if err != nil {
-			return disks
-		}
+		return disks
 	}
-
 	lines := strings.Split(strings.TrimSpace(string(out)), "\n")
 	for i, line := range lines {
 		if i == 0 {
-			continue // skip header
+			continue
 		}
 		fields := strings.Fields(line)
 		if len(fields) < 6 {
 			continue
 		}
-
 		device := fields[0]
-		// Skip pseudo filesystems
 		if strings.HasPrefix(device, "tmpfs") || strings.HasPrefix(device, "devtmpfs") ||
 			strings.HasPrefix(device, "udev") || strings.HasPrefix(device, "cgroupfs") ||
-			strings.HasPrefix(device, "overlay") || device == "none" {
+			strings.HasPrefix(device, "overlay") || device == "none" ||
+			strings.HasPrefix(device, "rootfs") {
 			continue
 		}
+		// df -k: Filesystem 1K-blocks Used Available Use% Mounted
+		totalKB, _ := strconv.ParseInt(fields[1], 10, 64)
+		usedKB, _ := strconv.ParseInt(fields[2], 10, 64)
+		availKB, _ := strconv.ParseInt(fields[3], 10, 64)
+		pct := parsePct(fields[4])
+		mount := fields[5]
 
-		di := models.DiskInfo{}
-		di.Device = device
-		if len(fields) >= 7 {
-			di.FSType = fields[1]
-			di.TotalGB = parseGBField(fields[2])
-			di.UsedGB = parseGBField(fields[3])
-			di.FreeGB = parseGBField(fields[4])
-			di.UsePct = parsePct(fields[5])
-			di.Mount = fields[6]
-		} else {
-			// basic df -h fallback
-			di.TotalGB = parseHumanSize(fields[1])
-			di.UsedGB = parseHumanSize(fields[2])
-			di.FreeGB = parseHumanSize(fields[3])
-			di.UsePct = parsePct(fields[4])
-			di.Mount = fields[5]
+		if totalKB == 0 {
+			continue
 		}
-
-		// Only include real block devices or important mounts
-		if strings.HasPrefix(device, "/dev/") || di.Mount == "/" || strings.HasPrefix(di.Mount, "/home") || strings.HasPrefix(di.Mount, "/mnt") {
-			disks = append(disks, di)
+		if !strings.HasPrefix(device, "/dev/") && mount != "/" &&
+			!strings.HasPrefix(mount, "/home") && !strings.HasPrefix(mount, "/mnt") &&
+			!strings.HasPrefix(mount, "/Volumes") {
+			continue
 		}
+		disks = append(disks, models.DiskInfo{
+			Device:  device,
+			Mount:   mount,
+			TotalGB: float64(totalKB) / 1024 / 1024,
+			UsedGB:  float64(usedKB) / 1024 / 1024,
+			FreeGB:  float64(availKB) / 1024 / 1024,
+			UsePct:  pct,
+		})
 	}
 	return disks
 }
 
 func scanWindows() []models.DiskInfo {
 	var disks []models.DiskInfo
-	out, err := exec.Command("wmic", "logicaldisk", "get", "DeviceID,Size,FreeSpace,FileSystem", "/format:csv").Output()
+	// Use PowerShell Get-PSDrive for accurate byte counts — wmic is deprecated on Win11
+	out, err := exec.Command("powershell", "-NoProfile", "-Command",
+		"Get-PSDrive -PSProvider FileSystem | Select-Object Name,Used,Free | ConvertTo-Csv -NoTypeInformation").Output()
+	if err == nil && len(out) > 10 {
+		return parsePSDrive(string(out))
+	}
+	// Fallback: wmic (Win10)
+	out, err = exec.Command("wmic", "logicaldisk", "get",
+		"DeviceID,Size,FreeSpace,FileSystem", "/format:csv").Output()
 	if err != nil {
 		return disks
 	}
 	lines := strings.Split(strings.TrimSpace(string(out)), "\n")
 	for _, line := range lines {
-		line = strings.TrimSpace(line)
-		if line == "" || strings.HasPrefix(line, "Node") {
+		line = strings.TrimSpace(strings.ReplaceAll(line, "\r", ""))
+		if line == "" || strings.HasPrefix(line, "Node") || strings.HasPrefix(line, "DeviceID") {
 			continue
 		}
 		parts := strings.Split(line, ",")
+		// CSV from wmic: Node,DeviceID,FileSystem,FreeSpace,Size
 		if len(parts) < 5 {
 			continue
 		}
-		totalBytes, _ := strconv.ParseInt(strings.TrimSpace(parts[3]), 10, 64)
-		freeBytes, _ := strconv.ParseInt(strings.TrimSpace(parts[2]), 10, 64)
+		deviceID := strings.TrimSpace(parts[1])
+		fsType := strings.TrimSpace(parts[2])
+		freeBytes, _ := strconv.ParseInt(strings.TrimSpace(parts[3]), 10, 64)
+		totalBytes, _ := strconv.ParseInt(strings.TrimSpace(parts[4]), 10, 64)
 		if totalBytes == 0 {
 			continue
 		}
@@ -101,9 +107,9 @@ func scanWindows() []models.DiskInfo {
 		freeGB := float64(freeBytes) / 1e9
 		usedGB := totalGB - freeGB
 		disks = append(disks, models.DiskInfo{
-			Device:  strings.TrimSpace(parts[1]),
-			Mount:   strings.TrimSpace(parts[1]),
-			FSType:  strings.TrimSpace(parts[4]),
+			Device:  deviceID,
+			Mount:   deviceID,
+			FSType:  fsType,
 			TotalGB: totalGB,
 			UsedGB:  usedGB,
 			FreeGB:  freeGB,
@@ -113,46 +119,48 @@ func scanWindows() []models.DiskInfo {
 	return disks
 }
 
-func parseGBField(s string) float64 {
-	s = strings.TrimSuffix(s, "GB")
-	s = strings.TrimSuffix(s, "G")
+func parsePSDrive(csv string) []models.DiskInfo {
+	var disks []models.DiskInfo
+	lines := strings.Split(strings.TrimSpace(csv), "\n")
+	for i, line := range lines {
+		if i == 0 {
+			continue // header
+		}
+		line = strings.TrimSpace(strings.ReplaceAll(line, "\r", ""))
+		// Strip quotes
+		line = strings.ReplaceAll(line, `"`, "")
+		parts := strings.Split(line, ",")
+		if len(parts) < 3 {
+			continue
+		}
+		name := strings.TrimSpace(parts[0])
+		usedBytes, _ := strconv.ParseInt(strings.TrimSpace(parts[1]), 10, 64)
+		freeBytes, _ := strconv.ParseInt(strings.TrimSpace(parts[2]), 10, 64)
+		totalBytes := usedBytes + freeBytes
+		if totalBytes == 0 {
+			continue
+		}
+		totalGB := float64(totalBytes) / 1e9
+		usedGB := float64(usedBytes) / 1e9
+		freeGB := float64(freeBytes) / 1e9
+		disks = append(disks, models.DiskInfo{
+			Device:  name + ":",
+			Mount:   name + ":",
+			TotalGB: totalGB,
+			UsedGB:  usedGB,
+			FreeGB:  freeGB,
+			UsePct:  usedGB / totalGB * 100,
+		})
+	}
+	return disks
+}
+
+func parsePct(s string) float64 {
+	s = strings.TrimSuffix(strings.TrimSpace(s), "%")
 	f, _ := strconv.ParseFloat(s, 64)
 	return f
 }
 
-func parseHumanSize(s string) float64 {
-	s = strings.TrimSpace(s)
-	if len(s) == 0 {
-		return 0
-	}
-	suffix := string(s[len(s)-1])
-	num := s[:len(s)-1]
-	f, err := strconv.ParseFloat(num, 64)
-	if err != nil {
-		return 0
-	}
-	switch strings.ToUpper(suffix) {
-	case "T":
-		return f * 1024
-	case "G":
-		return f
-	case "M":
-		return f / 1024
-	case "K":
-		return f / (1024 * 1024)
-	}
-	// It might be pure bytes if no suffix matched
-	n, _ := strconv.ParseFloat(s, 64)
-	return n / 1e9
-}
-
-func parsePct(s string) float64 {
-	s = strings.TrimSuffix(s, "%")
-	f, _ := strconv.ParseFloat(strings.TrimSpace(s), 64)
-	return f
-}
-
-// FormatGB returns a human-readable string for disk sizes
 func FormatGB(gb float64) string {
 	if gb >= 1024 {
 		return fmt.Sprintf("%.1f TB", gb/1024)
