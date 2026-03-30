@@ -290,7 +290,7 @@ cd aeye_watcher_ui && npm install && npm run dev</pre>
 </div>
 
 <style>
-  .page{display:flex;flex-direction:column;height:100%;overflow:hidden;}
+  .page{display:flex;flex-direction:column;min-height:100%;overflow:hidden;}
   .page-header{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.5rem;background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0;}
   .page-title{display:flex;align-items:center;gap:.85rem;}
   .page-icon{font-size:1.4rem;color:var(--accent);}
@@ -316,8 +316,8 @@ cd aeye_watcher_ui && npm install && npm run dev</pre>
   .doc-nav-item:hover{background:var(--accent-dim);color:var(--text);}
   .doc-nav-item.active{background:var(--accent-dim);color:var(--accent);border-left:2px solid var(--accent);}
 
-  .doc-content{
-    flex:1;overflow-y:auto;padding:2rem;
+  .doc-content{overflow-y:auto!important;
+    flex:1;overflow-y:auto;min-height:0;padding:2rem;
     scrollbar-width:thin;scrollbar-color:var(--border) transparent;
     max-width:820px;
   }
@@ -346,7 +346,7 @@ cd aeye_watcher_ui && npm install && npm run dev</pre>
   .arch-box.core{border-color:var(--accent);}
   .arch-box.system{border-color:var(--border);}
   .arch-box span{display:block;font-size:.72rem;color:var(--text-dim);font-weight:400;font-family:'Courier Prime',monospace;margin-top:2px;}
-  .arch-arrow{font-size:.85rem;color:var(--text-muted);}
+  .arch-arrow{font-size:.85rem;color:var(--text-dim);}
 
   .pkg-table{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin:.75rem 0;}
   .pkg-row{display:grid;grid-template-columns:240px 1fr;gap:1rem;padding:.55rem .85rem;border-bottom:1px solid var(--border);font-size:.85rem;align-items:baseline;}

@@ -1,6 +1,19 @@
 {
 	"/": [],
 	"/about": [],
+	"/acp": [],
+	"/agents": [],
+	"/alerts": [],
 	"/config": [],
-	"/docs": []
+	"/docs": [],
+	"/export": [],
+	"/gateways": [],
+	"/history": [],
+	"/mcp": [],
+	"/models": [],
+	"/plugins": [],
+	"/remote": [],
+	"/scan": [],
+	"/schedule": [],
+	"/services": []
 }

@@ -23,6 +23,7 @@ func ScanDisks() []models.DiskInfo {
 
 func scanUnix() []models.DiskInfo {
 	var disks []models.DiskInfo
+	seenDevices := make(map[string]bool)
 	// Use plain bytes (-k gives KB, easier to parse without locale issues)
 	out, err := exec.Command("df", "-k").Output()
 	if err != nil {
@@ -59,6 +60,11 @@ func scanUnix() []models.DiskInfo {
 			!strings.HasPrefix(mount, "/Volumes") {
 			continue
 		}
+		// Skip if we've already seen this device
+		if seenDevices[device] {
+			continue
+		}
+		seenDevices[device] = true
 		disks = append(disks, models.DiskInfo{
 			Device:  device,
 			Mount:   mount,

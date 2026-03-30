@@ -1,0 +1,2247 @@
+{
+  "components": [
+    {
+      "name": "Ollama",
+      "type": "Provider",
+      "status": "Running",
+      "path": "/usr/bin/ollama",
+      "port": "11434",
+      "version": "ollama version is 0.18.3",
+      "description": "Local LLM server",
+      "url": "http://localhost:11434/"
+    },
+    {
+      "name": "LM Studio",
+      "type": "Provider",
+      "status": "Installed",
+      "path": "/home/nathanielrand/.lmstudio/bin/lms",
+      "version": "CLI commit: f26090f",
+      "description": "Desktop LLM runner (lms CLI)"
+    },
+    {
+      "name": "LocalAI",
+      "type": "Provider",
+      "status": "Running",
+      "port": "8080",
+      "description": "OpenAI-compatible local server",
+      "url": "http://localhost:8080/v1/models"
+    },
+    {
+      "name": "llama-server",
+      "type": "Provider",
+      "status": "Not Found",
+      "description": "llama.cpp HTTP server"
+    },
+    {
+      "name": "koboldcpp",
+      "type": "Provider",
+      "status": "Not Found",
+      "description": "KoboldCPP inference server"
+    },
+    {
+      "name": "vLLM",
+      "type": "Provider",
+      "status": "Not Found",
+      "description": "High-throughput LLM serving"
+    },
+    {
+      "name": "text-generation-webui",
+      "type": "Provider",
+      "status": "Not Found",
+      "description": "Oobabooga WebUI server"
+    },
+    {
+      "name": "Jan",
+      "type": "Provider",
+      "status": "Not Found",
+      "description": "Jan.ai local server"
+    },
+    {
+      "name": "GPT4All",
+      "type": "Provider",
+      "status": "Not Found",
+      "description": "GPT4All local server"
+    },
+    {
+      "name": "Llamafile",
+      "type": "Provider",
+      "status": "Running",
+      "port": "8080",
+      "description": "Self-contained model server",
+      "url": "http://localhost:8080/v1/models"
+    },
+    {
+      "name": "Claude Code",
+      "type": "Agent",
+      "status": "Installed",
+      "path": "/home/nathanielrand/.local/bin/claude",
+      "version": "2.1.83 (Claude Code)",
+      "description": "Anthropic agentic coding assistant"
+    },
+    {
+      "name": "OpenInterpreter",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "Open-source code interpreter agent"
+    },
+    {
+      "name": "Aider",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "AI pair programmer in your terminal"
+    },
+    {
+      "name": "AutoGPT",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "Autonomous GPT agent framework"
+    },
+    {
+      "name": "CrewAI",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "Multi-agent orchestration"
+    },
+    {
+      "name": "LangChain",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "LLM application framework CLI"
+    },
+    {
+      "name": "SWE-agent",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "Software engineering agent"
+    },
+    {
+      "name": "Devin",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "Devin CLI agent"
+    },
+    {
+      "name": "Goose",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "Block open-source AI agent"
+    },
+    {
+      "name": "Amp",
+      "type": "Agent",
+      "status": "Not Found",
+      "description": "Sourcegraph coding agent"
+    },
+    {
+      "name": "OpenClaw",
+      "type": "Agent",
+      "status": "Installed",
+      "path": "/home/nathanielrand/.local/share/pnpm/openclaw",
+      "version": "OpenClaw 2026.3.23-2 (7ffe7e4)",
+      "description": "OpenClaw multi-agent framework (opens gateway on boot)"
+    },
+    {
+      "name": "Hermes",
+      "type": "Agent",
+      "status": "Installed",
+      "path": "/home/nathanielrand/.local/bin/hermes",
+      "description": "Hermes agent runtime (exposes HTTP gateway)"
+    },
+    {
+      "name": "Continue",
+      "type": "Agent Skill",
+      "status": "Not Found",
+      "description": "VS Code AI extension"
+    },
+    {
+      "name": "Copilot CLI",
+      "type": "Agent Skill",
+      "status": "Not Found",
+      "description": "GitHub Copilot CLI"
+    },
+    {
+      "name": "Cursor",
+      "type": "Agent Skill",
+      "status": "Not Found",
+      "description": "Cursor AI IDE"
+    },
+    {
+      "name": "Windsurf",
+      "type": "Agent Skill",
+      "status": "Not Found",
+      "description": "Codeium Windsurf IDE"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "Gateway",
+      "status": "Not Found",
+      "description": "OpenAI-compatible proxy/router"
+    },
+    {
+      "name": "OpenRouter",
+      "type": "Gateway",
+      "status": "Not Found",
+      "description": "Cloud model routing service"
+    },
+    {
+      "name": "Portkey",
+      "type": "Gateway",
+      "status": "Not Found",
+      "description": "AI gateway with observability"
+    },
+    {
+      "name": "OpenClaw Gateway",
+      "type": "Gateway",
+      "status": "Not Found",
+      "description": "OpenClaw boot gateway (auto-started by agent)"
+    },
+    {
+      "name": "Hermes Gateway",
+      "type": "Gateway",
+      "status": "Not Found",
+      "description": "Hermes agent gateway"
+    },
+    {
+      "name": "HelixML",
+      "type": "Gateway",
+      "status": "Not Found",
+      "description": "HelixML AI gateway"
+    },
+    {
+      "name": "ChromaDB",
+      "type": "Vector DB",
+      "status": "Not Found",
+      "description": "Embedding database"
+    },
+    {
+      "name": "Qdrant",
+      "type": "Vector DB",
+      "status": "Not Found",
+      "description": "Vector search engine"
+    },
+    {
+      "name": "Weaviate",
+      "type": "Vector DB",
+      "status": "Running",
+      "port": "8080",
+      "description": "Vector database",
+      "url": "http://localhost:8080/v1/.well-known/ready"
+    },
+    {
+      "name": "Milvus",
+      "type": "Vector DB",
+      "status": "Not Found",
+      "description": "Open-source vector DB"
+    },
+    {
+      "name": "LanceDB",
+      "type": "Vector DB",
+      "status": "Not Found",
+      "description": "Embedded vector DB"
+    },
+    {
+      "name": "pgvector",
+      "type": "Vector DB",
+      "status": "Not Found",
+      "description": "Postgres vector extension"
+    },
+    {
+      "name": "Open WebUI",
+      "type": "GUI Client",
+      "status": "Not Found",
+      "description": "Web UI for local models"
+    },
+    {
+      "name": "AnythingLLM",
+      "type": "GUI Client",
+      "status": "Not Found",
+      "description": "All-in-one LLM desktop client"
+    },
+    {
+      "name": "Msty",
+      "type": "GUI Client",
+      "status": "Not Found",
+      "description": "Desktop AI chat client"
+    },
+    {
+      "name": "LibreChat",
+      "type": "GUI Client",
+      "status": "Not Found",
+      "description": "Open-source chat UI"
+    },
+    {
+      "name": "Whisper.cpp",
+      "type": "TTS / Audio",
+      "status": "Not Found",
+      "description": "Fast speech recognition"
+    },
+    {
+      "name": "Whisper",
+      "type": "TTS / Audio",
+      "status": "Not Found",
+      "description": "OpenAI Whisper"
+    },
+    {
+      "name": "Piper",
+      "type": "TTS / Audio",
+      "status": "Not Found",
+      "description": "Neural TTS"
+    },
+    {
+      "name": "Bark",
+      "type": "TTS / Audio",
+      "status": "Not Found",
+      "description": "Text-to-audio model"
+    },
+    {
+      "name": "Coqui TTS",
+      "type": "TTS / Audio",
+      "status": "Not Found",
+      "description": "Coqui TTS server"
+    },
+    {
+      "name": "Langfuse",
+      "type": "Observability",
+      "status": "Not Found",
+      "description": "LLM observability platform"
+    },
+    {
+      "name": "Phoenix",
+      "type": "Observability",
+      "status": "Not Found",
+      "description": "Arize Phoenix tracing"
+    },
+    {
+      "name": "Helicone",
+      "type": "Observability",
+      "status": "Not Found",
+      "description": "LLM observability proxy"
+    },
+    {
+      "name": "Weights \u0026 Biases",
+      "type": "Observability",
+      "status": "Not Found",
+      "description": "ML experiment tracking"
+    }
+  ],
+  "models": [
+    {
+      "name": "gemma3n",
+      "tag": "e4b",
+      "size_bytes": 7547588625,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/gemma3n/e4b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen3.5",
+      "tag": "9b",
+      "size_bytes": 6594474236,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5/9b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "nous-hermes2",
+      "tag": "10.7b",
+      "size_bytes": 6072406727,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/nous-hermes2/10.7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lmstudio-community/Qwen3.5-9B-GGUF",
+      "tag": "Qwen3.5-9B-Q4_K_M.gguf",
+      "size_bytes": 5627044256,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/Qwen3.5-9B-GGUF/Qwen3.5-9B-Q4_K_M.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "qwen3",
+      "tag": "8b",
+      "size_bytes": 5225387677,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3/8b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "openhermes",
+      "tag": "7b-mistral-v2.5-q5_K_M",
+      "size_bytes": 5131421861,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/openhermes/7b-mistral-v2.5-q5_K_M",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "codegemma",
+      "tag": "7b",
+      "size_bytes": 5011852326,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/codegemma/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "nishtahir/zeta",
+      "tag": "7b",
+      "size_bytes": 4750306947,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/nishtahir/zeta/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "opencoder",
+      "tag": "8b",
+      "size_bytes": 4736065614,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/opencoder/8b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5-coder",
+      "tag": "7b",
+      "size_bytes": 4683087074,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5-coder/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "runpod/qwen-agentic",
+      "tag": "latest",
+      "size_bytes": 4683087074,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/runpod/qwen-agentic/latest",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5",
+      "tag": "7b",
+      "size_bytes": 4683086845,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lmstudio-community/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "tag": "Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf",
+      "size_bytes": 4683074048,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/Qwen2.5-Coder-7B-Instruct-GGUF/Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "qwen3-embedding",
+      "tag": "8b",
+      "size_bytes": 4676804928,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3-embedding/8b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "hermes3",
+      "tag": "8b",
+      "size_bytes": 4661226758,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/hermes3/8b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "llama3",
+      "tag": "8b",
+      "size_bytes": 4661224191,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/llama3/8b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5",
+      "tag": "7b-instruct-q4_0",
+      "size_bytes": 4431404029,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5/7b-instruct-q4_0",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "codeqwen",
+      "tag": "7b",
+      "size_bytes": 4179437974,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/codeqwen/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "zephyr",
+      "tag": "7b",
+      "size_bytes": 4109854451,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/zephyr/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "starcoder2",
+      "tag": "7b",
+      "size_bytes": 4042812743,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/starcoder2/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "deepseek-coder",
+      "tag": "6.7b",
+      "size_bytes": 3827834020,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/deepseek-coder/6.7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "codellama",
+      "tag": "7b",
+      "size_bytes": 3825910133,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/codellama/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "magicoder",
+      "tag": "7b",
+      "size_bytes": 3825807832,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/magicoder/7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "smallthinker",
+      "tag": "3b",
+      "size_bytes": 3616094773,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/smallthinker/3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "frob/qwen3.5-instruct",
+      "tag": "4b",
+      "size_bytes": 3389985722,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/frob/qwen3.5-instruct/4b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen3.5",
+      "tag": "4b",
+      "size_bytes": 3389983260,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5/4b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "gemma3",
+      "tag": "4b",
+      "size_bytes": 3338801315,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/gemma3/4b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen3-vl",
+      "tag": "4b",
+      "size_bytes": 3295635584,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3-vl/4b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "granite4",
+      "tag": "1b",
+      "size_bytes": 3267419912,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/granite4/1b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "JollyLlama/Megrez-3B-Instruct",
+      "tag": "Q8_0",
+      "size_bytes": 3102906307,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/JollyLlama/Megrez-3B-Instruct/Q8_0",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "nemotron-3-nano",
+      "tag": "4b",
+      "size_bytes": 2837596648,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/nemotron-3-nano/4b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lmstudio-community/NVIDIA-Nemotron-3-Nano-4B-GGUF",
+      "tag": "NVIDIA-Nemotron-3-Nano-4B-Q4_K_M.gguf",
+      "size_bytes": 2837072896,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/NVIDIA-Nemotron-3-Nano-4B-GGUF/NVIDIA-Nemotron-3-Nano-4B-Q4_K_M.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "DedeProgames/orion",
+      "tag": "2b",
+      "size_bytes": 2741192347,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/DedeProgames/orion/2b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen3.5",
+      "tag": "2b",
+      "size_bytes": 2741192347,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5/2b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen3",
+      "tag": "4b",
+      "size_bytes": 2497293444,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3/4b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lmstudio-community/Qwen3-4B-Instruct-2507-GGUF",
+      "tag": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+      "size_bytes": 2497280448,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/Qwen3-4B-Instruct-2507-GGUF/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "tomng/lfm2.5-instruct",
+      "tag": "1.2b",
+      "size_bytes": 2343337428,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/tomng/lfm2.5-instruct/1.2b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "tomng/lfm2.5-instruct",
+      "tag": "latest",
+      "size_bytes": 2343337428,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/tomng/lfm2.5-instruct/latest",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "TwinkleAI/Llama-3.2-3B-F1-Resoning-Instruct",
+      "tag": "3b",
+      "size_bytes": 2241013946,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/TwinkleAI/Llama-3.2-3B-F1-Resoning-Instruct/3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "glm-ocr",
+      "tag": "bf16",
+      "size_bytes": 2219298770,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/glm-ocr/bf16",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lmstudio-community/Ministral-3-3B-Instruct-2512-GGUF",
+      "tag": "Ministral-3-3B-Instruct-2512-Q4_K_M.gguf",
+      "size_bytes": 2146498240,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/Ministral-3-3B-Instruct-2512-GGUF/Ministral-3-3B-Instruct-2512-Q4_K_M.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "granite4",
+      "tag": "3b",
+      "size_bytes": 2099520968,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/granite4/3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "steamapp_merged_shader_cache",
+      "tag": "local",
+      "size_bytes": 2056279945,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/1422450/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_merged_shader_cache.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "scb10x/llama3.2-typhoon2-3b-instruct",
+      "tag": "latest",
+      "size_bytes": 2019891163,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/scb10x/llama3.2-typhoon2-3b-instruct/latest",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "Nobita/OpenClaw",
+      "tag": "latest",
+      "size_bytes": 2019392657,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/Nobita/OpenClaw/latest",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "llama3.2",
+      "tag": "3b",
+      "size_bytes": 2019392628,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/llama3.2/3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "hermes3",
+      "tag": "3b",
+      "size_bytes": 2019383881,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/hermes3/3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "DanyaVoredom/DanyAI-qwen2.5-coder-3b-instruct",
+      "tag": "latest",
+      "size_bytes": 1929912397,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/DanyaVoredom/DanyAI-qwen2.5-coder-3b-instruct/latest",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5-coder",
+      "tag": "3b",
+      "size_bytes": 1929912139,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5-coder/3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5",
+      "tag": "3b",
+      "size_bytes": 1929911945,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5/3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen3-vl",
+      "tag": "2b",
+      "size_bytes": 1889519136,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3-vl/2b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "glm-ocr",
+      "tag": "Q8_0",
+      "size_bytes": 1588187122,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/glm-ocr/Q8_0",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "codegemma",
+      "tag": "2b",
+      "size_bytes": 1551198008,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/codegemma/2b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen3",
+      "tag": "1.7b",
+      "size_bytes": 1359292957,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3/1.7b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "llama3.2",
+      "tag": "1b",
+      "size_bytes": 1321097844,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/llama3.2/1b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lmstudio-community/LFM2.5-1.2B-Instruct-GGUF",
+      "tag": "LFM2.5-1.2B-Instruct-Q8_0.gguf",
+      "size_bytes": 1246255456,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/LFM2.5-1.2B-Instruct-GGUF/LFM2.5-1.2B-Instruct-Q8_0.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "deepcoder",
+      "tag": "1.5b",
+      "size_bytes": 1117323213,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/deepcoder/1.5b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "steamapp_merged_shader_cache",
+      "tag": "local",
+      "size_bytes": 1043277671,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/526870/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_merged_shader_cache.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "qwen3.5",
+      "tag": "0.8b",
+      "size_bytes": 1036046107,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5/0.8b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5-coder",
+      "tag": "1.5b",
+      "size_bytes": 986061602,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5-coder/1.5b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5",
+      "tag": "1.5b",
+      "size_bytes": 986061405,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5/1.5b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lmstudio-community/Qwen3.5-9B-GGUF",
+      "tag": "mmproj-Qwen3.5-9B-BF16.gguf",
+      "size_bytes": 921704480,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/Qwen3.5-9B-GGUF/mmproj-Qwen3.5-9B-BF16.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "lmstudio-community/Ministral-3-3B-Instruct-2512-GGUF",
+      "tag": "mmproj-Ministral-3-3B-Instruct-2512-F16.gguf",
+      "size_bytes": 840297088,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/lmstudio-community/Ministral-3-3B-Instruct-2512-GGUF/mmproj-Ministral-3-3B-Instruct-2512-F16.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "gemma3",
+      "tag": "1b",
+      "size_bytes": 815319299,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/gemma3/1b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "deepseek-coder",
+      "tag": "1.3b",
+      "size_bytes": 776080356,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/deepseek-coder/1.3b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "lfm2.5-thinking",
+      "tag": "1.2b",
+      "size_bytes": 731163420,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/lfm2.5-thinking/1.2b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "softw8/LFM2.5-1.2B-Instruct-Q4_K_M",
+      "tag": "latest",
+      "size_bytes": 730906074,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/softw8/LFM2.5-1.2B-Instruct-Q4_K_M/latest",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "vikramlingam/LFM2.5-1.2B-Instruct-Q4_K_M",
+      "tag": "LFM2.5-1.2B-Instruct-Q4_K_M.gguf",
+      "size_bytes": 730895168,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/models/vikramlingam/LFM2.5-1.2B-Instruct-Q4_K_M/LFM2.5-1.2B-Instruct-Q4_K_M.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "granite4",
+      "tag": "350m",
+      "size_bytes": 708457896,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/granite4/350m",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "tinyllama",
+      "tag": "1.1b",
+      "size_bytes": 637699655,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/tinyllama/1.1b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "steamapp_merged_shader_cache",
+      "tag": "local",
+      "size_bytes": 529457383,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/1304930/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_merged_shader_cache.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "qwen3",
+      "tag": "0.6b",
+      "size_bytes": 522653277,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3/0.6b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5-coder",
+      "tag": "0.5b",
+      "size_bytes": 397821026,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5-coder/0.5b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "qwen2.5",
+      "tag": "0.5b",
+      "size_bytes": 397820829,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen2.5/0.5b",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "gemma3",
+      "tag": "270m",
+      "size_bytes": 291554440,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/gemma3/270m",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "nomic-embed-text-v1.5.f16",
+      "tag": "local",
+      "size_bytes": 274290560,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.cache/yay/gpt4all-chat/nomic-embed-text-v1.5.f16.gguf",
+      "extension": ".gguf",
+      "is_orphaned": true,
+      "format": "GGUF"
+    },
+    {
+      "name": "df3a000ea752f0d6",
+      "tag": "local",
+      "size_bytes": 195626457,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.cache/nvidia/GLCache/8efb846da2d64ec160666164e87b7b31/45b2a52c24d78c78/df3a000ea752f0d6.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "steamapp_merged_shader_cache",
+      "tag": "local",
+      "size_bytes": 180437446,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/3527290/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_merged_shader_cache.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "steamapp_shader_cache2",
+      "tag": "local",
+      "size_bytes": 103258137,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/1304930/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_shader_cache2.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "steamapp_shader_cache0",
+      "tag": "local",
+      "size_bytes": 96915694,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/1304930/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_shader_cache0.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "steamapp_shader_cache1",
+      "tag": "local",
+      "size_bytes": 90597731,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/1304930/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_shader_cache1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "nomic-embed-text-v1.5.Q4_K_M",
+      "tag": "local",
+      "size_bytes": 84106624,
+      "provider": "LM Studio",
+      "file_path": "/home/nathanielrand/.lmstudio/.internal/bundled-models/nomic-ai/nomic-embed-text-v1.5-GGUF/nomic-embed-text-v1.5.Q4_K_M.gguf",
+      "extension": ".gguf",
+      "is_orphaned": true,
+      "format": "GGUF"
+    },
+    {
+      "name": "Systran/faster-whisper-tiny.en",
+      "tag": "latest",
+      "size_bytes": 78090866,
+      "provider": "HuggingFace",
+      "file_path": "/home/nathanielrand/.cache/huggingface/hub/models--Systran--faster-whisper-tiny.en",
+      "extension": "",
+      "is_orphaned": false,
+      "format": "HuggingFace Cache"
+    },
+    {
+      "name": "steamapp_merged_shader_cache",
+      "tag": "local",
+      "size_bytes": 78015856,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/1522820/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_merged_shader_cache.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "CachedAssetRegistry_0",
+      "tag": "local",
+      "size_bytes": 73691643,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/Documents/Unreal Projects/Roguelite/Intermediate/CachedAssetRegistry_0.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "steamapp_merged_shader_cache",
+      "tag": "local",
+      "size_bytes": 73325687,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/shadercache/2868840/nvidiav1/GLCache/9c0bd31d23d26ab72700afef770f88d2/882b1d3ab1a69beb/steamapp_merged_shader_cache.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "CachedAssetRegistry_0",
+      "tag": "local",
+      "size_bytes": 69624352,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.config/Epic/UnrealEngine/5.6/Intermediate/CachedAssetRegistry_0.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "e0c955-1",
+      "tag": "local",
+      "size_bytes": 55959272,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/common/SteamLinuxRuntime_sniper/sniper_platform_3.0.20260218.209091/files/7d/e0c955-1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "271e28-1",
+      "tag": "local",
+      "size_bytes": 55154928,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/common/SteamLinuxRuntime_sniper/sniper_platform_3.0.20260218.209091/files/95/271e28-1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "dimavz/whisper-tiny",
+      "tag": "latest",
+      "size_bytes": 44038976,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/dimavz/whisper-tiny/latest",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    },
+    {
+      "name": "9abf84-1",
+      "tag": "local",
+      "size_bytes": 37113864,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/common/SteamLinuxRuntime_soldier/soldier_platform_2.0.20260218.209090/files/eb/9abf84-1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "55a642-1",
+      "tag": "local",
+      "size_bytes": 36512100,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/common/SteamLinuxRuntime_soldier/soldier_platform_2.0.20260218.209090/files/a6/55a642-1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "df3a000ea752f0d6",
+      "tag": "local",
+      "size_bytes": 26994286,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.cache/nvidia/GLCache/0fa429c28cf1389a0c47a732bf1e99e1/45b2a52c24d78c78/df3a000ea752f0d6.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "dep-graph",
+      "tag": "local",
+      "size_bytes": 19588476,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/Code/ekko-term/target/debug/incremental/ekko_term-2wp8e7k3h0lla/s-hh22c3buxt-10bqwc1-ce018yf4dv2qyjysya1u6uuz5/dep-graph.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "v8_context_snapshot",
+      "tag": "local",
+      "size_bytes": 16177537,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/spotify-launcher/install/usr/share/spotify/v8_context_snapshot.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "1f8f37-1",
+      "tag": "local",
+      "size_bytes": 14173972,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/common/SteamLinuxRuntime_sniper/sniper_platform_3.0.20260218.209091/files/f6/1f8f37-1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "7fd917-1",
+      "tag": "local",
+      "size_bytes": 13623368,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/common/SteamLinuxRuntime_sniper/sniper_platform_3.0.20260218.209091/files/8c/7fd917-1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "1fee83e04c0ea4d8",
+      "tag": "local",
+      "size_bytes": 12564796,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.cache/nvidia/GLCache/47eeb08a0182857396f9473ef2469645/45b2a52c24d78c78/1fee83e04c0ea4d8.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "1fee83e04c0ea4d8",
+      "tag": "local",
+      "size_bytes": 12517664,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.cache/nvidia/GLCache/4ce83a0259715061ccd89395ee086b24/45b2a52c24d78c78/1fee83e04c0ea4d8.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "scriptCache-current",
+      "tag": "local",
+      "size_bytes": 12178924,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.cache/mozilla/firefox/6geswwq1.default-release/startupCache/scriptCache-current.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "bd9d2982f363093d",
+      "tag": "local",
+      "size_bytes": 11479332,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.cache/nvidia/GLCache/0159ea986f6f22312a05ec0d0c6aa3e7/45b2a52c24d78c78/bd9d2982f363093d.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "a664e7-1",
+      "tag": "local",
+      "size_bytes": 11039216,
+      "provider": "Unknown / Orphaned",
+      "file_path": "/home/nathanielrand/.local/share/Steam/steamapps/common/SteamLinuxRuntime_soldier/soldier_platform_2.0.20260218.209090/files/97/a664e7-1.bin",
+      "extension": ".bin",
+      "is_orphaned": true,
+      "format": "PyTorch/GGML"
+    },
+    {
+      "name": "ggml-vocab-command-r",
+      "tag": "local",
+      "size_bytes": 10874545,
+      "provider": "llama.cpp",
+      "file_path": "/home/nathanielrand/.cache/yay/llm-cublas-git/src/llama.cpp/models/ggml-vocab-command-r.gguf",
+      "extension": ".gguf",
+      "is_orphaned": false,
+      "format": "GGUF"
+    },
+    {
+      "name": "qwen3.5",
+      "tag": "cloud",
+      "size_bytes": 0,
+      "provider": "Ollama",
+      "file_path": "/home/nathanielrand/.ollama/models/manifests/registry.ollama.ai/library/qwen3.5/cloud",
+      "extension": ".manifest",
+      "is_orphaned": false,
+      "format": "Ollama Manifest"
+    }
+  ],
+  "agent_cards": [
+    {
+      "name": "Claude Code",
+      "ecosystem": "claude",
+      "status": "partial",
+      "description": "Anthropic's agentic coding assistant",
+      "icon": "🧠",
+      "files": [
+        {
+          "type": "config",
+          "name": "policy-limits.json",
+          "path": "/home/nathanielrand/.claude/policy-limits.json",
+          "size_bytes": 86
+        }
+      ],
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "claude",
+          "found": true,
+          "path": "/home/nathanielrand/.local/bin/claude"
+        },
+        {
+          "label": "Desktop Config",
+          "pattern": "/home/nathanielrand/.claude/claude_desktop_config.json",
+          "found": false
+        },
+        {
+          "label": "Agent Settings",
+          "pattern": "/home/nathanielrand/.claude/settings.json",
+          "found": false
+        },
+        {
+          "label": "CLAUDE.md (project)",
+          "pattern": "CLAUDE.md",
+          "found": false
+        },
+        {
+          "label": "SOUL.md",
+          "pattern": "/home/nathanielrand/.claude/SOUL.md",
+          "found": false
+        },
+        {
+          "label": "MEMORY.md",
+          "pattern": "/home/nathanielrand/.claude/MEMORY.md",
+          "found": false
+        },
+        {
+          "label": "SUMMARY.md",
+          "pattern": "/home/nathanielrand/.claude/SUMMARY.md",
+          "found": false
+        },
+        {
+          "label": "MCP Config",
+          "pattern": "/home/nathanielrand/.claude/mcp.json",
+          "found": false
+        },
+        {
+          "label": "Skills Dir",
+          "pattern": "/home/nathanielrand/.claude/skills",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "OpenClaw",
+      "ecosystem": "openclaw",
+      "status": "partial",
+      "description": "OpenClaw multi-agent framework with built-in gateway",
+      "icon": "🦅",
+      "files": [
+        {
+          "type": "config",
+          "name": "openclaw.json",
+          "path": "/home/nathanielrand/.openclaw/openclaw.json",
+          "size_bytes": 5221
+        },
+        {
+          "type": "config",
+          "name": "update-check.json",
+          "path": "/home/nathanielrand/.openclaw/update-check.json",
+          "size_bytes": 49
+        },
+        {
+          "type": "agent-def",
+          "name": "AGENTS.md",
+          "path": "/home/nathanielrand/.openclaw/workspace/AGENTS.md",
+          "size_bytes": 7874
+        },
+        {
+          "type": "persona",
+          "name": "IDENTITY.md",
+          "path": "/home/nathanielrand/.openclaw/workspace/IDENTITY.md",
+          "size_bytes": 636
+        },
+        {
+          "type": "soul",
+          "name": "SOUL.md",
+          "path": "/home/nathanielrand/.openclaw/workspace/SOUL.md",
+          "size_bytes": 1673
+        },
+        {
+          "type": "persona",
+          "name": "USER.md",
+          "path": "/home/nathanielrand/.openclaw/workspace/USER.md",
+          "size_bytes": 477
+        }
+      ],
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "openclaw",
+          "found": true,
+          "path": "/home/nathanielrand/.local/share/pnpm/openclaw"
+        },
+        {
+          "label": "Config Dir",
+          "pattern": "/home/nathanielrand/.openclaw",
+          "found": true,
+          "path": "/home/nathanielrand/.openclaw"
+        },
+        {
+          "label": "Config File",
+          "pattern": "/home/nathanielrand/.openclaw/config.yaml",
+          "found": false
+        },
+        {
+          "label": "SOUL.md",
+          "pattern": "/home/nathanielrand/.openclaw/SOUL.md",
+          "found": false
+        },
+        {
+          "label": "AGENTS.md",
+          "pattern": "/home/nathanielrand/.openclaw/AGENTS.md",
+          "found": false
+        },
+        {
+          "label": "USER.md",
+          "pattern": "/home/nathanielrand/.openclaw/USER.md",
+          "found": false
+        },
+        {
+          "label": "Skills Dir",
+          "pattern": "/home/nathanielrand/.openclaw/skills",
+          "found": false
+        },
+        {
+          "label": "Gateway Config",
+          "pattern": "/home/nathanielrand/.openclaw/gateway.yaml",
+          "found": false
+        },
+        {
+          "label": "Memory Dir",
+          "pattern": "/home/nathanielrand/.openclaw/memory",
+          "found": true,
+          "path": "/home/nathanielrand/.openclaw/memory"
+        }
+      ]
+    },
+    {
+      "name": "Hermes",
+      "ecosystem": "hermes",
+      "status": "partial",
+      "description": "Hermes agent runtime with HTTP gateway",
+      "icon": "⚡",
+      "files": [
+        {
+          "type": "config",
+          "name": ".env",
+          "path": "/home/nathanielrand/.hermes/.env",
+          "size_bytes": 15093
+        },
+        {
+          "type": "config",
+          "name": ".skills_prompt_snapshot.json",
+          "path": "/home/nathanielrand/.hermes/.skills_prompt_snapshot.json",
+          "size_bytes": 55187
+        },
+        {
+          "type": "soul",
+          "name": "SOUL.md",
+          "path": "/home/nathanielrand/.hermes/SOUL.md",
+          "size_bytes": 537
+        },
+        {
+          "type": "config",
+          "name": "auth.json",
+          "path": "/home/nathanielrand/.hermes/auth.json",
+          "size_bytes": 4336
+        },
+        {
+          "type": "config",
+          "name": "channel_directory.json",
+          "path": "/home/nathanielrand/.hermes/channel_directory.json",
+          "size_bytes": 285
+        },
+        {
+          "type": "config",
+          "name": "config.yaml",
+          "path": "/home/nathanielrand/.hermes/config.yaml",
+          "size_bytes": 9068
+        },
+        {
+          "type": "config",
+          "name": "context_length_cache.yaml",
+          "path": "/home/nathanielrand/.hermes/context_length_cache.yaml",
+          "size_bytes": 734
+        },
+        {
+          "type": "config",
+          "name": "gateway_state.json",
+          "path": "/home/nathanielrand/.hermes/gateway_state.json",
+          "size_bytes": 446
+        },
+        {
+          "type": "config",
+          "name": "models_dev_cache.json",
+          "path": "/home/nathanielrand/.hermes/models_dev_cache.json",
+          "size_bytes": 1711652
+        },
+        {
+          "type": "memory",
+          "name": "state.db",
+          "path": "/home/nathanielrand/.hermes/state.db",
+          "size_bytes": 937984
+        },
+        {
+          "type": "soul",
+          "name": "SOUL.md",
+          "path": "/home/nathanielrand/.hermes/SOUL.md",
+          "size_bytes": 537
+        },
+        {
+          "type": "agent-def",
+          "name": "AGENTS.md",
+          "path": "/home/nathanielrand/.hermes/hermes-agent/AGENTS.md",
+          "size_bytes": 20799
+        },
+        {
+          "type": "soul",
+          "name": "SOUL.md",
+          "path": "/home/nathanielrand/.hermes/hermes-agent/docker/SOUL.md",
+          "size_bytes": 536
+        },
+        {
+          "type": "memory",
+          "name": "History.md",
+          "path": "/home/nathanielrand/.hermes/hermes-agent/node_modules/css-value/History.md",
+          "size_bytes": 60
+        },
+        {
+          "type": "memory",
+          "name": "History.md",
+          "path": "/home/nathanielrand/.hermes/hermes-agent/node_modules/events/History.md",
+          "size_bytes": 3253
+        },
+        {
+          "type": "memory",
+          "name": "History.md",
+          "path": "/home/nathanielrand/.hermes/hermes-agent/node_modules/util-deprecate/History.md",
+          "size_bytes": 282
+        },
+        {
+          "type": "memory",
+          "name": "memory.md",
+          "path": "/home/nathanielrand/.hermes/hermes-agent/website/docs/user-guide/features/memory.md",
+          "size_bytes": 9536
+        },
+        {
+          "type": "memory",
+          "name": "MEMORY.md",
+          "path": "/home/nathanielrand/.hermes/memories/MEMORY.md",
+          "size_bytes": 993
+        },
+        {
+          "type": "persona",
+          "name": "USER.md",
+          "path": "/home/nathanielrand/.hermes/memories/USER.md",
+          "size_bytes": 1265
+        }
+      ],
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "hermes",
+          "found": true,
+          "path": "/home/nathanielrand/.local/bin/hermes"
+        },
+        {
+          "label": "Config Dir",
+          "pattern": "/home/nathanielrand/.hermes",
+          "found": true,
+          "path": "/home/nathanielrand/.hermes"
+        },
+        {
+          "label": "Config File",
+          "pattern": "/home/nathanielrand/.hermes/config.yaml",
+          "found": true,
+          "path": "/home/nathanielrand/.hermes/config.yaml"
+        },
+        {
+          "label": "SOUL.md",
+          "pattern": "/home/nathanielrand/.hermes/SOUL.md",
+          "found": true,
+          "path": "/home/nathanielrand/.hermes/SOUL.md"
+        },
+        {
+          "label": "AGENTS.md",
+          "pattern": "/home/nathanielrand/.hermes/AGENTS.md",
+          "found": false
+        },
+        {
+          "label": "USER.md",
+          "pattern": "/home/nathanielrand/.hermes/USER.md",
+          "found": false
+        },
+        {
+          "label": "Skills Dir",
+          "pattern": "/home/nathanielrand/.hermes/skills",
+          "found": true,
+          "path": "/home/nathanielrand/.hermes/skills"
+        },
+        {
+          "label": "Tools Dir",
+          "pattern": "/home/nathanielrand/.hermes/tools",
+          "found": false
+        },
+        {
+          "label": "Personas Dir",
+          "pattern": "/home/nathanielrand/.hermes/personas",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "OpenInterpreter",
+      "ecosystem": "openinterpreter",
+      "status": "not_found",
+      "description": "Open-source code interpreter agent",
+      "icon": "🐍",
+      "files": null,
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "interpreter",
+          "found": false
+        },
+        {
+          "label": "Config File",
+          "pattern": "/home/nathanielrand/.openinterpreter/config.yaml",
+          "found": false
+        },
+        {
+          "label": "Profile",
+          "pattern": "/home/nathanielrand/.openinterpreter/profile.yaml",
+          "found": false
+        },
+        {
+          "label": "History",
+          "pattern": "/home/nathanielrand/.openinterpreter/history.db",
+          "found": false
+        },
+        {
+          "label": "Custom Skills",
+          "pattern": "/home/nathanielrand/.openinterpreter/skills",
+          "found": false
+        },
+        {
+          "label": "USER.md",
+          "pattern": "/home/nathanielrand/.openinterpreter/USER.md",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "Aider",
+      "ecosystem": "aider",
+      "status": "not_found",
+      "description": "AI pair programmer in your terminal",
+      "icon": "✍️",
+      "files": [
+        {
+          "type": "config",
+          "name": ".claude.json",
+          "path": "/home/nathanielrand/.claude.json",
+          "size_bytes": 1482
+        },
+        {
+          "type": "config",
+          "name": ".ollama_gui.json",
+          "path": "/home/nathanielrand/.ollama_gui.json",
+          "size_bytes": 437
+        },
+        {
+          "type": "memory",
+          "name": "README.fr.md",
+          "path": "/home/nathanielrand/README.fr.md",
+          "size_bytes": 44132
+        },
+        {
+          "type": "memory",
+          "name": "README.ja.md",
+          "path": "/home/nathanielrand/README.ja.md",
+          "size_bytes": 40560
+        },
+        {
+          "type": "memory",
+          "name": "README.md",
+          "path": "/home/nathanielrand/README.md",
+          "size_bytes": 52340
+        },
+        {
+          "type": "memory",
+          "name": "README.pt-br.md",
+          "path": "/home/nathanielrand/README.pt-br.md",
+          "size_bytes": 41500
+        },
+        {
+          "type": "memory",
+          "name": "README.vi.md",
+          "path": "/home/nathanielrand/README.vi.md",
+          "size_bytes": 42507
+        },
+        {
+          "type": "memory",
+          "name": "README.zh.md",
+          "path": "/home/nathanielrand/README.zh.md",
+          "size_bytes": 37677
+        },
+        {
+          "type": "config",
+          "name": "package-lock.json",
+          "path": "/home/nathanielrand/package-lock.json",
+          "size_bytes": 92
+        },
+        {
+          "type": "config",
+          "name": "package.json",
+          "path": "/home/nathanielrand/package.json",
+          "size_bytes": 3
+        }
+      ],
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "aider",
+          "found": false
+        },
+        {
+          "label": "Config (.aider.conf.yml)",
+          "pattern": "/home/nathanielrand/.aider.conf.yml",
+          "found": false
+        },
+        {
+          "label": ".aiderignore",
+          "pattern": ".aiderignore",
+          "found": false
+        },
+        {
+          "label": "CONVENTIONS.md",
+          "pattern": "CONVENTIONS.md",
+          "found": false
+        },
+        {
+          "label": "History File",
+          "pattern": "/home/nathanielrand/.aider.chat.history.md",
+          "found": false
+        },
+        {
+          "label": "Model Metadata",
+          "pattern": "/home/nathanielrand/.aider.model.metadata.json",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "AutoGPT",
+      "ecosystem": "autogpt",
+      "status": "not_found",
+      "description": "Autonomous AI agent framework",
+      "icon": "🤖",
+      "files": null,
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "autogpt",
+          "found": false
+        },
+        {
+          "label": ".env Config",
+          "pattern": ".env",
+          "found": false
+        },
+        {
+          "label": "AI Settings",
+          "pattern": "ai_settings.yaml",
+          "found": false
+        },
+        {
+          "label": "Plugin Dir",
+          "pattern": "plugins",
+          "found": false
+        },
+        {
+          "label": "Workspace Dir",
+          "pattern": "auto_gpt_workspace",
+          "found": false
+        },
+        {
+          "label": "SOUL.md",
+          "pattern": "SOUL.md",
+          "found": false
+        },
+        {
+          "label": "USER.md",
+          "pattern": "USER.md",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "CrewAI",
+      "ecosystem": "crewai",
+      "status": "not_found",
+      "description": "Multi-agent orchestration framework",
+      "icon": "🚢",
+      "files": null,
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "crewai",
+          "found": false
+        },
+        {
+          "label": "Crew Config",
+          "pattern": "crew.yaml",
+          "found": false
+        },
+        {
+          "label": "Agents Config",
+          "pattern": "config/agents.yaml",
+          "found": false
+        },
+        {
+          "label": "Tasks Config",
+          "pattern": "config/tasks.yaml",
+          "found": false
+        },
+        {
+          "label": "Tools Dir",
+          "pattern": "tools",
+          "found": false
+        },
+        {
+          "label": "Knowledge Base",
+          "pattern": "knowledge",
+          "found": false
+        },
+        {
+          "label": "SOUL.md",
+          "pattern": "SOUL.md",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "LangChain",
+      "ecosystem": "langchain",
+      "status": "not_found",
+      "description": "LLM application framework",
+      "icon": "🔗",
+      "files": null,
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "langchain",
+          "found": false
+        },
+        {
+          "label": "LangSmith Config",
+          "pattern": "/home/nathanielrand/.langchain/config.json",
+          "found": false
+        },
+        {
+          "label": "Chains Dir",
+          "pattern": "chains",
+          "found": false
+        },
+        {
+          "label": "Tools Dir",
+          "pattern": "tools",
+          "found": false
+        },
+        {
+          "label": "Vectorstore",
+          "pattern": "vectorstore",
+          "found": false
+        },
+        {
+          "label": ".env (API Keys)",
+          "pattern": ".env",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "Goose",
+      "ecosystem": "goose",
+      "status": "not_found",
+      "description": "Block's open-source AI dev agent",
+      "icon": "🪿",
+      "files": null,
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "goose",
+          "found": false
+        },
+        {
+          "label": "Config Dir",
+          "pattern": "/home/nathanielrand/.config/goose",
+          "found": false
+        },
+        {
+          "label": "Config File",
+          "pattern": "/home/nathanielrand/.config/goose/config.yaml",
+          "found": false
+        },
+        {
+          "label": "SOUL.md",
+          "pattern": "/home/nathanielrand/.config/goose/SOUL.md",
+          "found": false
+        },
+        {
+          "label": "Profiles Dir",
+          "pattern": "/home/nathanielrand/.config/goose/profiles",
+          "found": false
+        },
+        {
+          "label": "Extensions Dir",
+          "pattern": "/home/nathanielrand/.config/goose/extensions",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "Ollama",
+      "ecosystem": "ollama",
+      "status": "partial",
+      "description": "Local model runner \u0026 server",
+      "icon": "🦙",
+      "files": [
+        {
+          "type": "config",
+          "name": "config.json",
+          "path": "/home/nathanielrand/.ollama/config.json",
+          "size_bytes": 330
+        }
+      ],
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "ollama",
+          "found": true,
+          "path": "/usr/bin/ollama"
+        },
+        {
+          "label": "Models Directory",
+          "pattern": "/home/nathanielrand/.ollama/models",
+          "found": true,
+          "path": "/home/nathanielrand/.ollama/models"
+        },
+        {
+          "label": "Config File",
+          "pattern": "/home/nathanielrand/.ollama/config",
+          "found": false
+        },
+        {
+          "label": "Manifests",
+          "pattern": "/home/nathanielrand/.ollama/models/manifests",
+          "found": true,
+          "path": "/home/nathanielrand/.ollama/models/manifests"
+        },
+        {
+          "label": "Blobs / Weights",
+          "pattern": "/home/nathanielrand/.ollama/models/blobs",
+          "found": true,
+          "path": "/home/nathanielrand/.ollama/models/blobs"
+        },
+        {
+          "label": "Modelfile",
+          "pattern": "Modelfile",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "LM Studio",
+      "ecosystem": "lmstudio",
+      "status": "partial",
+      "description": "Desktop LLM UI and server",
+      "icon": "🖥️",
+      "files": [
+        {
+          "type": "config",
+          "name": "mcp.json",
+          "path": "/home/nathanielrand/.lmstudio/mcp.json",
+          "size_bytes": 22
+        },
+        {
+          "type": "config",
+          "name": "settings.json",
+          "path": "/home/nathanielrand/.lmstudio/settings.json",
+          "size_bytes": 3612
+        }
+      ],
+      "expected_files": [
+        {
+          "label": "CLI (lms)",
+          "pattern": "lms",
+          "found": true,
+          "path": "/home/nathanielrand/.lmstudio/bin/lms"
+        },
+        {
+          "label": "Hub Models (Windows)",
+          "pattern": "/home/nathanielrand/.lmstudio/hub/models",
+          "found": true,
+          "path": "/home/nathanielrand/.lmstudio/hub/models"
+        },
+        {
+          "label": "Hub Models (Linux)",
+          "pattern": "/home/nathanielrand/.cache/lm-studio/models",
+          "found": false
+        },
+        {
+          "label": "Hub Models (Linux alt)",
+          "pattern": "/home/nathanielrand/.local/share/lm-studio/models",
+          "found": false
+        },
+        {
+          "label": "Hub Models (macOS)",
+          "pattern": "/home/nathanielrand/.lmstudio/models",
+          "found": true,
+          "path": "/home/nathanielrand/.lmstudio/models"
+        },
+        {
+          "label": "Config Dir",
+          "pattern": "/home/nathanielrand/.local/share/lm-studio/models",
+          "found": false
+        },
+        {
+          "label": "Presets Dir",
+          "pattern": "/home/nathanielrand/.lmstudio/presets",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "Open WebUI",
+      "ecosystem": "openwebui",
+      "status": "not_found",
+      "description": "Web interface for local LLMs",
+      "icon": "🌐",
+      "files": null,
+      "expected_files": [
+        {
+          "label": "CLI Binary",
+          "pattern": "open-webui",
+          "found": false
+        },
+        {
+          "label": "Data Dir",
+          "pattern": "/home/nathanielrand/.open-webui",
+          "found": false
+        },
+        {
+          "label": "Config",
+          "pattern": "/home/nathanielrand/.open-webui/config.json",
+          "found": false
+        },
+        {
+          "label": "Database",
+          "pattern": "/home/nathanielrand/.open-webui/webui.db",
+          "found": false
+        },
+        {
+          "label": "Tools Dir",
+          "pattern": "/home/nathanielrand/.open-webui/tools",
+          "found": false
+        },
+        {
+          "label": "Functions Dir",
+          "pattern": "/home/nathanielrand/.open-webui/functions",
+          "found": false
+        }
+      ]
+    },
+    {
+      "name": "Continue",
+      "ecosystem": "continue",
+      "status": "not_found",
+      "description": "VS Code AI coding assistant",
+      "icon": "▶️",
+      "files": null,
+      "expected_files": [
+        {
+          "label": "Config File",
+          "pattern": "/home/nathanielrand/.continue/config.json",
+          "found": false
+        },
+        {
+          "label": "Config TS",
+          "pattern": "/home/nathanielrand/.continue/config.ts",
+          "found": false
+        },
+        {
+          "label": "Prompts Dir",
+          "pattern": "/home/nathanielrand/.continue/prompts",
+          "found": false
+        },
+        {
+          "label": "Rules Dir",
+          "pattern": "/home/nathanielrand/.continue/rules",
+          "found": false
+        },
+        {
+          "label": "Docs Dir",
+          "pattern": "/home/nathanielrand/.continue/docs",
+          "found": false
+        }
+      ]
+    }
+  ],
+  "mcp_servers": null,
+  "acp_agents": null,
+  "model_dirs": [
+    "/home/nathanielrand/.ollama/models",
+    "/home/nathanielrand/.lmstudio/hub/models",
+    "/home/nathanielrand/.cache/huggingface/hub"
+  ],
+  "disks": [
+    {
+      "mount": "/",
+      "device": "/dev/nvme1n1p2",
+      "fs_type": "",
+      "total_gb": 463.7597541809082,
+      "used_gb": 451.2245635986328,
+      "free_gb": 11.507980346679688,
+      "use_pct": 98
+    },
+    {
+      "mount": "/boot",
+      "device": "/dev/nvme1n1p1",
+      "fs_type": "",
+      "total_gb": 1.9960861206054688,
+      "used_gb": 1.2745094299316406,
+      "free_gb": 0.7215766906738281,
+      "use_pct": 64
+    },
+    {
+      "mount": "/mnt/GameDev",
+      "device": "/dev/sdb1",
+      "fs_type": "",
+      "total_gb": 219.00129318237305,
+      "used_gb": 0.00197601318359375,
+      "free_gb": 207.80522537231445,
+      "use_pct": 1
+    }
+  ],
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 2070 SUPER",
+    "used_mb": 5579,
+    "total_mb": 8192,
+    "use_pct": 68.10302734375,
+    "temp_c": 55,
+    "backend": "nvidia"
+  },
+  "scanned_at": "2026-03-30T16:36:42-04:00"
+}

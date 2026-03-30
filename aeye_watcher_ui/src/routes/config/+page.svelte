@@ -205,7 +205,7 @@
 </div>
 
 <style>
-  .page{display:flex;flex-direction:column;height:100%;overflow:hidden;}
+  .page{display:flex;flex-direction:column;min-height:100%;overflow:hidden;}
   .page-header{
     display:flex;align-items:center;justify-content:space-between;
     padding:.85rem 1.5rem;background:var(--bg2);border-bottom:1px solid var(--border);
@@ -222,7 +222,7 @@
   .btn-secondary{background:none;border:1px solid var(--border);color:var(--text-dim);padding:.4rem 1rem;border-radius:3px;cursor:pointer;font-family:'Rajdhani',monospace;font-size:.85rem;transition:all .15s;}
   .btn-secondary:hover{border-color:var(--accent);color:var(--accent);}
 
-  .content{flex:1;overflow-y:auto;padding:1.5rem;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
+  .content{flex:1;overflow-y:auto;min-height:0;padding:1.5rem;scrollbar-width:thin;scrollbar-color:var(--border) transparent;}
 
   .config-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:1rem;}
   .full-width{grid-column:1/-1;}
